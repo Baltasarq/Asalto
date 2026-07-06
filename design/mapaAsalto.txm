@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<Mapa >
+<LocInic>Aldea Sajona</LocInic>
+<Locs >
+<Loc >
+<Nombre>Albergue de refugiados</Nombre>
+<Desc>
+
+Una amplia estancia, iluminada por varias antorchas, sirve de refugio a hombres de distintas razas. Las banderas, con los dragones rojo y blanco, que se exhiben en una de las paredes. Un hombre de barba blanca y larga con larga vara es la cabeza visible de esta gente.</Desc>
+<Com>loc#28</Com>
+<NORTE>Laberinto6</NORTE>
+<ESTE>Espiral</ESTE>
+<OESTE>Refectorio de refugiados</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Aldea Sajona</Nombre>
+<Desc>
+No ha quedado nada en pie, ni piedra sobre piedra. El entorno es desolador.
+</Desc>
+<Com>loc#1</Com>
+<SUR>Sobre la colina</SUR>
+</Loc>
+
+<Loc >
+<Nombre>Bosque</Nombre>
+<Desc>
+El frondoso bosque hace que jirones de niebla se enzarcen en sus ramas y arbustos. La estrecha senda serpentea entre raices discurre de un luminoso este a oeste.
+</Desc>
+<Com>loc#6</Com>
+<ESTE>Linde del Bosque</ESTE>
+<OESTE>Paso del perro</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Bosque a la entrada</Nombre>
+<Desc>
+
+Apenas se puede reconocer la entrada de la cueva, al norte. El sendero sale del bosque hacia el oeste.</Desc>
+<Com>loc#48</Com>
+<OESTE>Sendero del bosque</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Camino entre colinas</Nombre>
+<Desc>
+El camino avanza por el valle, desde la parte alta, al este, a una zona harto boscosa, al oeste.
+</Desc>
+<Com>loc#3</Com>
+<ESTE>Sobre la colina</ESTE>
+<OESTE>Cruce de caminos</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Camino norte</Nombre>
+<Desc>
+
+El camino norte de Westmorland se interna hacia el bosque, al norte (en tu estado no puedes ir), y a Westmorland, al sur.</Desc>
+<Com>loc#50</Com>
+<SUR>Westmorland</SUR>
+<ESTE>Sendero del bosque</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Canal de agua</Nombre>
+<Desc>
+
+El agua descendiende con renovadas fuerzas, dejando un estrecho paso elevado lateral para subir, esquivando estalactitas.</Desc>
+<Com>loc#38</Com>
+<ESTE>Remanso</ESTE>
+<OESTE>Cascada</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Cascada</Nombre>
+<Desc>
+
+Una hermosa y gran cascada hace descender el agua con gran fuerza hacia el canal que ya pasaste. La cascada embalsa el agua en un lago de escasa profundidad.</Desc>
+<Com>loc#39</Com>
+<ESTE>Canal de agua</ESTE>
+<OESTE>Interior de la cascada</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Cruce de caminos</Nombre>
+<Desc>
+La senda se bifurca hacia el norte, rodeando las estribaciones de la sierra que cierra el valle al oeste, con el paso del perro como ruta entre las estribaciones.
+</Desc>
+<Com>loc#4</Com>
+<NORTE>Linde del Bosque</NORTE>
+<ESTE>Camino entre colinas</ESTE>
+<OESTE>Derrumbe</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Cruce de pasajes</Nombre>
+<Desc>
+
+Un cruce de estrechos pasajes permite ir al oeste, al este (donde se observa menos oscuridad), y al sur, un lugar de gran luminosidad.</Desc>
+<Com>loc#45</Com>
+<SUR>Salida de la cueva</SUR>
+<ESTE>Lago interior</ESTE>
+<OESTE>Hogar de Ambrosio</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Derrumbe</Nombre>
+<Desc>
+El camino desciende desde el paso del perro, hacia el oeste, a los valles, al este. Un gran desmoronamiento de rocas bloquea el camino al oeste.
+</Desc>
+<Com>loc#9</Com>
+<ESTE>Cruce de caminos</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Entrada a la cueva</Nombre>
+<Desc>
+El paso entre el desfiladero sigue de norte a sureste. La entrada a una cueva se abre al sur en la pared de roca.
+</Desc>
+<Com>loc#8</Com>
+<NORTE>Paso del perro</NORTE>
+<SUR>Gruta de entrada</SUR>
+</Loc>
+
+<Loc >
+<Nombre>Espiral</Nombre>
+<Desc>
+
+Una espiral, cual escalera de caracol gigante, desciende a las profundidades.</Desc>
+<Com>loc#29</Com>
+<OESTE>Albergue de refugiados</OESTE>
+<ABAJO>Inicio de la espiral</ABAJO>
+</Loc>
+
+<Loc >
+<Nombre>Estalactitas</Nombre>
+<Desc>
+Muchas estalactitas se agrupan encima de tu cabeza, y se abren cual arco de entrada hacia el estee y sur.
+</Desc>
+<Com>loc#17</Com>
+<NORTE>Pasaje arenoso</NORTE>
+<SUR>Laberinto1</SUR>
+<ESTE>Puente de piedra</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Estrecho pasaje</Nombre>
+<Desc>
+
+La caverna se estrecha ahora. Parece un pasaje para una sola persona, excavado en la roca. Dobla hacia el norte desde el oeste.</Desc>
+<Com>loc#30</Com>
+<NORTE>Puerta bloqueada</NORTE>
+<OESTE>Inicio de la espiral</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Explanada</Nombre>
+<Desc>
+
+Una gran explanda enlosetada contempla un bello panorama de estalactitas. Unos casi imperceptibles escalones conducen al este.</Desc>
+<Com>loc#37</Com>
+<SUR>Puente sobre el acueducto</SUR>
+<ESTE>Idolo</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Gran lago</Nombre>
+<Desc>
+Una gran estancia alberga un lago de profundas e iridiscentes aguas, debido a la luz exterior. No hay más salida que el este.
+</Desc>
+<Com>loc#11</Com>
+<ESTE>Gruta de entrada</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Gruta de entrada</Nombre>
+<Desc>
+El estrecho paso se adentra hacia el sur, desde la boca, al norte.
+</Desc>
+<Com>loc#10</Com>
+<NORTE>Entrada a la cueva</NORTE>
+<OESTE>Gran lago</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Hogar de Ambrosio</Nombre>
+<Desc>
+Un catre, algunas velas y una mesa es todo lo que tiene Ambrosio.</Desc>
+<ESTE>Cruce de pasajes</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Idolo</Nombre>
+<Desc>
+
+El Idolo es un centinela siniestro de una gran roca que se encuentra su izquierda.</Desc>
+<Com>loc#41</Com>
+<OESTE>Explanada</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Inicio de la espiral</Nombre>
+<Desc>
+La espiral se eleva en la penumbra de la cueva. La base y el tope destacan bajo la luz de las antorchas.</Desc>
+<ESTE>Estrecho pasaje</ESTE>
+<ARRIBA>Espiral</ARRIBA>
+</Loc>
+
+<Loc >
+<Nombre>Interior de la cascada</Nombre>
+<Desc>
+
+El interior de la cascada es musgoso y rocoso, con la cortina de agua tras de ti. El sitio es estrecho sin duda, y el nivel del agua ha crecido un poco.</Desc>
+<Com>loc#40</Com>
+<ESTE>Cascada</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Laberinto1</Nombre>
+<Desc>
+Un tramo de cueva estrecho te permite avanzar hacia el norte y el sur; un pasaje surge al este.
+</Desc>
+<Com>loc#20</Com>
+<NORTE>Estalactitas</NORTE>
+<SUR>Laberinto3</SUR>
+<ESTE>Laberinto7</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Laberinto2</Nombre>
+<Desc>
+Un tramo de cueva estrecho te permite avanzar de este a oeste; un pasaje surge al sur.
+</Desc>
+<Com>loc#21</Com>
+<SUR>Laberinto5</SUR>
+<ESTE>Laberinto4</ESTE>
+<OESTE>Laberinto1</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Laberinto3</Nombre>
+<Desc>
+Un tramo de cueva estrecho te permite avanzar de este a oeste; un pasaje surge al sur.
+</Desc>
+<Com>loc#22</Com>
+<SUR>Laberinto8</SUR>
+<ESTE>Laberinto5</ESTE>
+<OESTE>Laberinto3</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Laberinto4</Nombre>
+<Desc>
+Un tramo de cueva estrecho te permite avanzar de oeste a sur.
+</Desc>
+<Com>loc#23</Com>
+<SUR>Laberinto7</SUR>
+<OESTE>Laberinto2</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Laberinto5</Nombre>
+<Desc>
+Un tramo de cueva estrecho te permite avanzar de este a oeste. Al norte surge un pasaje.
+</Desc>
+<Com>loc#26</Com>
+<NORTE>Laberinto5</NORTE>
+<ESTE>Laberinto7</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Laberinto6</Nombre>
+<Desc>
+Un tramo de cueva estrecho te permite avanzar de este a oeste. Al norte y al sur surgen pasajes.
+</Desc>
+<Com>loc#25</Com>
+<NORTE>Laberinto6</NORTE>
+<SUR>Albergue de refugiados</SUR>
+<ESTE>Laberinto1</ESTE>
+<OESTE>Laberinto5</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Laberinto7</Nombre>
+<Desc>
+Un tramo de cueva estrecho te permite avanzar de este a oeste. Al norte surge un pasaje.
+</Desc>
+<Com>loc#26</Com>
+<NORTE>Laberinto3</NORTE>
+<ESTE>Laberinto4</ESTE>
+<OESTE>Laberinto2</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Laberinto8</Nombre>
+<Desc>
+Un tramo de cueva estrecho te permite avanzar de oeste a norte.
+</Desc>
+<Com>loc#27</Com>
+<NORTE>Laberinto3</NORTE>
+<OESTE>Laberinto6</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Lago interior</Nombre>
+<Desc>
+
+Unas escaleras, al oeste, permiten bajar al nivel del lago interior, formado por un salto de agua. Al norte, un pasaje sube hacia una zona oscura.</Desc>
+<Com>loc#44</Com>
+<NORTE>Pasaje de la serpiente</NORTE>
+<OESTE>Cruce de pasajes</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Linde del Bosque</Nombre>
+<Desc>
+Hacia el oeste se extiende frondoso el bosque que rodea la sierra. La salida es posible se abre hacia el sureste en forma de paso encajonado, mientras al sur distingues la boca de una cueva.
+</Desc>
+<Com>loc#5</Com>
+<SUR>Cruce de caminos</SUR>
+<OESTE>Bosque</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Pasaje arenoso</Nombre>
+<Desc>
+La gruta desciende de norte a sur sobre un lecho arenoso. Al este, un agujero del que llega claridad.
+</Desc>
+<Com>loc#15</Com>
+<NORTE>Recodo de la cueva</NORTE>
+<SUR>Estalactitas</SUR>
+<ESTE>Pasaje del agua</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Pasaje de gravilla</Nombre>
+<Desc>
+
+El paso se anchea y guijarros mojados y mohosos tachonan el suelo de roca.</Desc>
+<Com>loc#34</Com>
+<NORTE>Puente sobre el acueducto</NORTE>
+<OESTE>Pasaje de salida</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Pasaje de la serpiente</Nombre>
+<Desc>
+
+El pasaje sigue de norte a sur.</Desc>
+<Com>loc#43</Com>
+<NORTE>Pasaje estrecho</NORTE>
+<SUR>Lago interior</SUR>
+</Loc>
+
+<Loc >
+<Nombre>Pasaje de salida</Nombre>
+<Desc>
+
+El paso se va haciendo menos estrecho a medida que se avanza hacia el sur, para entonces comenzar hacia el este.</Desc>
+<Com>loc#33</Com>
+<NORTE>Precipicio</NORTE>
+<ESTE>Pasaje de gravilla</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Pasaje del agua</Nombre>
+<Desc>
+Como un acueducto, el agua baja con gran fuerza de norte a este, aunque la salida practicable es la del oeste.
+</Desc>
+<Com>loc#16</Com>
+<OESTE>Pasaje arenoso</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Pasaje estrecho</Nombre>
+<Desc>
+
+El paso corre de norte a sur, con el canal en un lado, y se estrecha, aunque se observa un aumento de claridad hacia el sur.</Desc>
+<Com>loc#42</Com>
+<SUR>Pasaje de la serpiente</SUR>
+</Loc>
+
+<Loc >
+<Nombre>Paso del perro</Nombre>
+<Desc>
+Abruptamente el bosque desaparece en un paso rocoso. El estrecho e inquietante desfiladero del paso del perro, torciendo de este a sur.
+</Desc>
+<Com>loc#7</Com>
+<SUR>Entrada a la cueva</SUR>
+<ESTE>Bosque</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Precipicio</Nombre>
+<Desc>
+
+El camino ahora no excede de dos palmos de cornisa sobre un abismo insondable. El soporte de roca gira de oeste a sur.</Desc>
+<Com>loc#32</Com>
+<SUR>Pasaje de salida</SUR>
+<OESTE>Puerta bloqueada</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Puente de piedra</Nombre>
+<Desc>
+Un arco de piedra se eleva, cual puente sobre la oscuridad, de este a oeste. En su mitad, un altar.
+</Desc>
+<Com>loc#18</Com>
+<ESTE>Recodo del canal</ESTE>
+<OESTE>Estalactitas</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Puente semipodrido</Nombre>
+<Desc>
+La sala se abre en semioscuridad a un puente cubierto de podredumbre sobre el lecho de un canal, de este a oeste.
+</Desc>
+<Com>loc#15</Com>
+<ESTE>Salida del paso secreto</ESTE>
+<OESTE>Recodo de la cueva</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Puente sobre el acueducto</Nombre>
+<Desc>
+
+Un puente se tiende de norte a sur sobre el curso del agua. Resbaladizas escaleras descienden hacia el oeste.</Desc>
+<Com>loc#35</Com>
+<NORTE>Explanada</NORTE>
+<SUR>Pasaje de gravilla</SUR>
+<OESTE>Remanso</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Puerta bloqueada</Nombre>
+<Desc>
+
+En otros tiempos, era una puerta. Ahora, el pasaje se encuentra bloqueado por grandes rocas entre las columnas de un arco de medio punto.</Desc>
+<Com>loc#31</Com>
+<SUR>Estrecho pasaje</SUR>
+<ESTE>Precipicio</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Recodo de la cueva</Nombre>
+<Desc>
+La iridiscente cueva gira de este a sur.
+</Desc>
+<Com>loc#16</Com>
+<SUR>Pasaje arenoso</SUR>
+<ESTE>Puente semipodrido</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Recodo del canal</Nombre>
+<Desc>
+La estancia arenosa contempla el paso del canal, de norte a este.
+</Desc>
+<Com>loc#19</Com>
+<OESTE>Puente de piedra</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Refectorio de refugiados</Nombre>
+<Desc>
+
+En esta gran sala, mayor incluso que la anterior, se han colocado largas mesas de madera bajo la luz de las antorchas. En otras partes, catres de todos los estilos se amontonan unos junto a otros.</Desc>
+<Com>loc#27</Com>
+<ESTE>Albergue de refugiados</ESTE>
+</Loc>
+
+<Loc >
+<Nombre>Remanso</Nombre>
+<Desc>
+
+El agua forma un meandro del que sale con menos furor. La curva exterior del meandro forma un cala arenosa.</Desc>
+<Com>loc#36</Com>
+<ESTE>Puente sobre el acueducto</ESTE>
+<OESTE>Canal de agua</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Salida de la cueva</Nombre>
+<Desc>
+
+Una puerta impide la salida de la cueva, ya se adivina la luz diurna al otro lado.</Desc>
+<Com>loc#47</Com>
+<NORTE>Cruce de pasajes</NORTE>
+</Loc>
+
+<Loc >
+<Nombre>Salida del paso secreto</Nombre>
+<Desc>
+Una gran estancia se abre hacia el oeste, y se estrecha hasta morir, al este, en una parte de agua.
+</Desc>
+<Com>loc#14</Com>
+<OESTE>Puente semipodrido</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Sendero del bosque</Nombre>
+<Desc>
+
+El sendero recorre esta parte del bosque de este a oeste.</Desc>
+<Com>loc#49</Com>
+<ESTE>Bosque a la entrada</ESTE>
+<OESTE>Camino norte</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Sobre la colina</Nombre>
+<Desc>
+En el nebuloso valle, a tus pies, se extiende la aldea sajona que tu partida ha venido a atacar.
+</Desc>
+<Com>loc#2</Com>
+<NORTE>Aldea Sajona</NORTE>
+<OESTE>Camino entre colinas</OESTE>
+</Loc>
+
+<Loc >
+<Nombre>Westmorland</Nombre>
+<Desc>
+
+La villa bulle de actividad con el mercado en el centro de la plaza, donde también se encuentra el castillo.</Desc>
+<Com>loc#51</Com>
+<NORTE>Camino norte</NORTE>
+</Loc>
+
+</Locs>
+
+<Objs >
+<Obj >
+<Nombre>altar</Nombre>
+<Desc>Justo en la mitad del puente, su objetivo es sustentar algo importante.</Desc>
+<estaEn>Puente de piedra</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>ambrosio</Nombre>
+<Desc>Ambrosio es un hombre de mediana edad, que te mira afable.</Desc>
+<estaEn>Recodo del canal</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>antorcha apagada</Nombre>
+<Desc>Apagada.</Desc>
+<estaEn>Recodo del canal</estaEn>
+<Femenino>S</Femenino>
+</Obj>
+
+<Obj >
+<Nombre>antorcha encendida</Nombre>
+<Desc>Ilumina perfectamente.</Desc>
+<estaEn>Recodo del canal</estaEn>
+<Femenino>S</Femenino>
+</Obj>
+
+<Obj >
+<Nombre>banderas</Nombre>
+<Desc>Son las banderas britana y sajona, respectivamente.</Desc>
+<estaEn>Albergue de refugiados</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>capa</Nombre>
+<Desc>Tu capa, de fina lana tintada de negro, que te distingue como oficial al mando en las batallas. Bueno, es una de las cosas, al menos.</Desc>
+<Llevado>S</Llevado>
+<Femenino>S</Femenino>
+</Obj>
+
+<Obj >
+<Nombre>cascada</Nombre>
+<Desc>La cortina de agua es impenetrable a la vista, pero la profundidad del lago permite arriesgarse a atravesarla.</Desc>
+<estaEn>Cascada</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>derrumbe</Nombre>
+<Desc>Muchas, inalcanzables rocas, apiladas una sobre otra.</Desc>
+<estaEn>Derrumbe</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>esmeralda</Nombre>
+<Desc>Es preciosa.</Desc>
+<estaEn>Remanso</estaEn>
+<Femenino>S</Femenino>
+</Obj>
+
+<Obj >
+<Nombre>espada</Nombre>
+<Desc>Legado de tu padre, fiel herramienta en mil batallas.</Desc>
+<Llevado>S</Llevado>
+<Femenino>S</Femenino>
+</Obj>
+
+<Obj >
+<Nombre>harapo</Nombre>
+<Desc>Un trozo un poco grande de capa.</Desc>
+<Llevado>S</Llevado>
+</Obj>
+
+<Obj >
+<Nombre>hilo</Nombre>
+<Desc>Un hilo se ha desprendido al cortar la capa con la espada.</Desc>
+<Llevado>S</Llevado>
+</Obj>
+
+<Obj >
+<Nombre>hombre</Nombre>
+<Desc>Es el jefe de los refugiados.</Desc>
+<estaEn>Albergue de refugiados</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>idolo</Nombre>
+<Desc>El Idolo tiene dos agujeros por ojos.</Desc>
+<estaEn>Idolo</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>lago</Nombre>
+<Desc>La luz exterior entra por un lugar del techo, formando caprichosos reflejos en el abovedado.</Desc>
+<estaEn>Lago interior</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>llave</Nombre>
+<Desc>Entre sus cosas, ves una llave.</Desc>
+<estaEn>Hogar de Ambrosio</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>pedernal</Nombre>
+<Desc>Se trata de una dura piedra.</Desc>
+<estaEn>Pasaje del agua</estaEn>
+</Obj>
+
+<Obj >
+<Nombre>piedra</Nombre>
+<Desc>Recia y pesada, pero no muy grande, de forma piramidal.</Desc>
+<estaEn>Puente de piedra</estaEn>
+<Femenino>S</Femenino>
+</Obj>
+
+<Obj >
+<Nombre>puerta</Nombre>
+<Desc>Muy recia y con un gran candado.</Desc>
+<estaEn>Salida de la cueva</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>rocas</Nombre>
+<Desc>Son muchas, aunque no demasiado pesadas y con huecos entre ellas. A lo mejor, empujando ...</Desc>
+<estaEn>Puerta bloqueada</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>serpiente</Nombre>
+<Desc>Una serpiente bloquea el paso. Entre el agua y el animal, nada se puede hacer.</Desc>
+<estaEn>Pasaje de la serpiente</estaEn>
+<Escenario>S</Escenario>
+</Obj>
+
+<Obj >
+<Nombre>tronco</Nombre>
+<Desc>Es un trono recio, pero de liviano peso.</Desc>
+<estaEn>Pasaje arenoso</estaEn>
+</Obj>
+
+<Obj >
+<Nombre>trozo</Nombre>
+<Desc>Es un poco de lo que antes era tu capa.</Desc>
+<Llevado>S</Llevado>
+</Obj>
+
+</Objs>
+
+</Mapa>
+

@@ -1,0 +1,379 @@
+Aldea Sajona
+No ha quedado nada en pie, ni piedra sobre piedra. El entorno es desolador.
+[loc#1]
+> i
+espada,
+capa,
+trozo,
+hilo,
+harapo
+
+> ex trozo
+Es un poco de lo que antes era tu capa.
+
+> ex hilo
+Un hilo se ha desprendido al cortar la capa con la espada.
+
+> ex harapo
+Un trozo un poco grande de capa.
+
+> ex espada
+Legado de tu padre, fiel herramienta en mil batallas.
+
+> ex capa
+Tu capa, de fina lana tintada de negro, que te distingue como oficial al mando en las batallas. Bueno, es una de las cosas, al menos.
+
+> s
+
+Sobre la colina
+En el nebuloso valle, a tus pies, se extiende la aldea sajona que tu partida ha venido a atacar.
+[loc#2]
+> o
+
+Camino entre colinas
+El camino avanza por el valle, desde la parte alta, al este, a una zona harto boscosa, al oeste.
+[loc#3]
+> o
+
+Cruce de caminos
+La senda se bifurca hacia el norte, rodeando las estribaciones de la sierra que cierra el valle al oeste, con el paso del perro como ruta entre las estribaciones.
+[loc#4]
+> o a Derrumbe
+> n
+
+Linde del Bosque
+Hacia el oeste se extiende frondoso el bosque que rodea la sierra. La salida es posible se abre hacia el sureste en forma de paso encajonado, mientras al sur distingues la boca de una cueva.
+[loc#5]
+> o
+
+Bosque
+El frondoso bosque hace que jirones de niebla se enzarcen en sus ramas y arbustos. La estrecha senda serpentea entre raices discurre de un luminoso este a oeste.
+[loc#6]
+> o
+
+Paso del perro
+Abruptamente el bosque desaparece en un paso rocoso. El estrecho e inquietante desfiladero del paso del perro, torciendo de este a sur.
+[loc#7]
+> s
+
+Entrada a la cueva
+El paso entre el desfiladero sigue de norte a sureste. La entrada a una cueva se abre al sur en la pared de roca.
+[loc#8]
+> s a Gruta de entrada
+.finloc
+ 
+
+Derrumbe
+El camino desciende desde el paso del perro, hacia el oeste, a los valles, al este. Un gran desmoronamiento de rocas bloquea el camino al oeste.
+[loc#9]
+> e a Cruce de caminos
+> ex derrumbe
+Muchas, inalcanzables rocas, apiladas una sobre otra.
+.finloc
+
+Gruta de entrada
+El estrecho paso se adentra hacia el sur, desde la boca, al norte.
+[loc#10]
+> n a Entrada a la cueva
+> o
+
+Gran lago
+Una gran estancia alberga un lago de profundas e iridiscentes aguas, debido a la luz exterior. No hay más salida que el este.
+[loc#11]
+.finloc
+
+Salida del paso secreto
+Una gran estancia se abre hacia el oeste, y se estrecha hasta morir, al este, en una parte de agua.
+[loc#14]
+> o
+
+Puente semipodrido
+La sala se abre en semioscuridad a un puente cubierto de podredumbre sobre el lecho de un canal, de este a oeste.
+[loc#15]
+> o
+
+Recodo de la cueva
+La iridiscente cueva gira de este a sur.
+[loc#16]
+
+> s
+
+Pasaje arenoso
+La gruta desciende de norte a sur sobre un lecho arenoso. Al este, un agujero del que llega claridad.
+[loc#15]
+> ex tronco
+Es un trono recio, pero de liviano peso.
+> coger tronco
+Cogido.
+> s a Estalactitas
+> e
+
+Pasaje del agua
+Como un acueducto, el agua baja con gran fuerza de norte a este, aunque la salida practicable es la del oeste.
+[loc#16]
+
+> ex pedernal
+Se trata de una dura piedra.
+
+> coge pedernal
+Cogido.
+.finloc
+
+Estalactitas
+Muchas estalactitas se agrupan encima de tu cabeza, y se abren cual arco de entrada hacia el estee y sur.
+[loc#17]
+> s a Laberinto1
+> n a Pasaje arenoso
+> e
+
+Puente de piedra
+Un arco de piedra se eleva, cual puente sobre la oscuridad, de este a oeste. En su mitad, un altar.
+[loc#18]
+> ex altar
+Justo en la mitad del puente, su objetivo es sustentar algo importante.
+> ex piedra
+Recia y pesada, pero no muy grande, de forma piramidal.
+> coge piedra
+Cogida.
+> e
+
+Recodo del canal
+La estancia arenosa contempla el paso del canal, de norte a este.
+[loc#19]
+> ex ambrosio
+Ambrosio es un hombre de mediana edad, que te mira afable.
+> ex antorcha encendida
+Ilumina perfectamente.
+> coge antorcha encendida
+Cogida.
+> ex antorcha apagada
+Apagada.
+> coge antorcha apagada
+Cogida.
+.finloc
+
+Laberinto1
+Un tramo de cueva estrecho te permite avanzar hacia el norte y el sur; un pasaje surge al este.
+[loc#20]
+> n a Estalactitas
+> s a Laberinto3
+> e a Laberinto7
+.finloc
+
+Laberinto2
+Un tramo de cueva estrecho te permite avanzar de este a oeste; un pasaje surge al sur.
+[loc#21]
+> o a Laberinto1
+> s a Laberinto5
+> e a Laberinto4
+.finloc
+
+Laberinto3
+Un tramo de cueva estrecho te permite avanzar de este a oeste; un pasaje surge al sur.
+[loc#22]
+> o a Laberinto3
+> s a Laberinto8
+> e a Laberinto5
+.finloc
+
+Laberinto4
+Un tramo de cueva estrecho te permite avanzar de oeste a sur.
+[loc#23]
+> o a Laberinto2
+> s a Laberinto7
+.finloc
+
+Laberinto8
+Un tramo de cueva estrecho te permite avanzar de oeste a norte.
+[loc#27]
+> o a Laberinto6
+> n a Laberinto3
+.finloc
+
+Laberinto7
+Un tramo de cueva estrecho te permite avanzar de este a oeste. Al norte surge un pasaje.
+[loc#26]
+> e a Laberinto4
+> n a Laberinto3
+> o a Laberinto2
+.finloc
+
+Laberinto6
+Un tramo de cueva estrecho te permite avanzar de este a oeste. Al norte y al sur surgen pasajes.
+[loc#25]
+> e a Laberinto1
+> n a Laberinto6
+> s a Albergue de refugiados
+> o a Laberinto5
+.finloc
+
+Laberinto5
+Un tramo de cueva estrecho te permite avanzar de este a oeste. Al norte surge un pasaje.
+[loc#26]
+> e a Laberinto7
+> n a Laberinto5
+.finloc
+
+Albergue de refugiados
+[loc#28]
+Una amplia estancia, iluminada por varias antorchas, sirve de refugio a hombres de distintas razas. Las banderas, con los dragones rojo y blanco, que se exhiben en una de las paredes. Un hombre de barba blanca y larga con larga vara es la cabeza visible de esta gente.
+> ex hombre
+Es el jefe de los refugiados.
+> ex banderas
+Son las banderas britana y sajona, respectivamente.
+> n a Laberinto6
+> e a Espiral
+> o
+.finloc
+
+Refectorio de refugiados
+[loc#27]
+En esta gran sala, mayor incluso que la anterior, se han colocado largas mesas de madera bajo la luz de las antorchas. En otras partes, catres de todos los estilos se amontonan unos junto a otros.
+.finloc
+
+Espiral
+[loc#29]
+Una espiral, cual escalera de caracol gigante, desciende a las profundidades.
+> o a Albergue de refugiados
+> abajo
+
+Inicio de la espiral
+La espiral se eleva en la penumbra de la cueva. La base y el tope destacan bajo la luz de las antorchas.
+> e
+
+Estrecho pasaje
+[loc#30]
+La caverna se estrecha ahora. Parece un pasaje para una sola persona, excavado en la roca. Dobla hacia el norte desde el oeste.
+
+> n
+
+Puerta bloqueada
+[loc#31]
+En otros tiempos, era una puerta. Ahora, el pasaje se encuentra bloqueado por grandes rocas entre las columnas de un arco de medio punto.
+>ex rocas
+Son muchas, aunque no demasiado pesadas y con huecos entre ellas. A lo mejor, empujando ...
+>e
+
+Precipicio
+[loc#32]
+El camino ahora no excede de dos palmos de cornisa sobre un abismo insondable. El soporte de roca gira de oeste a sur.
+> s
+
+Pasaje de salida
+[loc#33]
+El paso se va haciendo menos estrecho a medida que se avanza hacia el sur, para entonces comenzar hacia el este.
+> e
+
+Pasaje de gravilla
+[loc#34]
+El paso se anchea y guijarros mojados y mohosos tachonan el suelo de roca.
+> n
+
+Puente sobre el acueducto
+[loc#35]
+Un puente se tiende de norte a sur sobre el curso del agua. Resbaladizas escaleras descienden hacia el oeste.
+
+> n a Explanada
+
+> o
+
+Remanso
+[loc#36]
+El agua forma un meandro del que sale con menos furor. La curva exterior del meandro forma un cala arenosa.
+> ex esmeralda
+Es preciosa.
+> coge la esmeralda
+Cogida.
+> o
+
+Canal de agua
+[loc#38]
+El agua descendiende con renovadas fuerzas, dejando un estrecho paso elevado lateral para subir, esquivando estalactitas.
+> o
+
+Cascada
+[loc#39]
+Una hermosa y gran cascada hace descender el agua con gran fuerza hacia el canal que ya pasaste. La cascada embalsa el agua en un lago de escasa profundidad.
+
+> ex cascada
+La cortina de agua es impenetrable a la vista, pero la profundidad del lago permite arriesgarse a atravesarla.
+
+> o
+
+Interior de la cascada
+[loc#40]
+El interior de la cascada es musgoso y rocoso, con la cortina de agua tras de ti. El sitio es estrecho sin duda, y el nivel del agua ha crecido un poco.
+.finloc
+
+Explanada
+[loc#37]
+Una gran explanda enlosetada contempla un bello panorama de estalactitas. Unos casi imperceptibles escalones conducen al este.
+> s a Puente sobre el acueducto
+> e
+
+Idolo
+[loc#41]
+El Idolo es un centinela siniestro de una gran roca que se encuentra su izquierda.
+> ex idolo
+El Idolo tiene dos agujeros por ojos.
+.finloc
+
+Pasaje estrecho
+[loc#42]
+El paso corre de norte a sur, con el canal en un lado, y se estrecha, aunque se observa un aumento de claridad hacia el sur.
+> s
+
+Pasaje de la serpiente
+[loc#43]
+El pasaje sigue de norte a sur.
+> ex serpiente
+Una serpiente bloquea el paso. Entre el agua y el animal, nada se puede hacer.
+> s
+
+Lago interior
+[loc#44]
+Unas escaleras, al oeste, permiten bajar al nivel del lago interior, formado por un salto de agua. Al norte, un pasaje sube hacia una zona oscura.
+> ex lago
+La luz exterior entra por un lugar del techo, formando caprichosos reflejos en el abovedado.
+> o
+
+Cruce de pasajes
+[loc#45]
+Un cruce de estrechos pasajes permite ir al oeste, al este (donde se observa menos oscuridad), y al sur, un lugar de gran luminosidad.
+> s a Salida de la cueva
+> o
+
+Hogar de Ambrosio
+Un catre, algunas velas y una mesa es todo lo que tiene Ambrosio.
+> ex llave
+Entre sus cosas, ves una llave.
+.finloc
+
+Salida de la cueva
+[loc#47]
+Una puerta impide la salida de la cueva, ya se adivina la luz diurna al otro lado.
+> ex puerta
+Muy recia y con un gran candado.
+> n a Cruce de pasajes
+.finloc
+
+Bosque a la entrada
+[loc#48]
+Apenas se puede reconocer la entrada de la cueva, al norte. El sendero sale del bosque hacia el oeste.
+> o
+
+Sendero del bosque
+[loc#49]
+El sendero recorre esta parte del bosque de este a oeste.
+
+> o
+
+Camino norte
+[loc#50]
+El camino norte de Westmorland se interna hacia el bosque, al norte (en tu estado no puedes ir), y a Westmorland, al sur.
+> s
+
+Westmorland
+[loc#51]
+La villa bulle de actividad con el mercado en el centro de la plaza, donde también se encuentra el castillo.
+.finloc

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>dca254ed-1169-44b8-9087-6eab28c237b1</ifid>
+            <format>glulx</format>
+        </identification>
+        <bibliographic>
+            <title>Asalto y Castigo</title>
+            <author>Baltasar</author>
+            <language>ES</language>
+            <headline>...antes de los acontecimientos narrados en "El trono de Inglaterra"</headline>
+            <genre>Fiction</genre>
+            <description>Ulfius guía una expedición de Asalto y Castigo a una aldea sajona. Sin embargo, aún después de arrasar a los sajones, las cosas no saldrán como esperaba.</description>
+        </bibliographic>
+        <contacts>
+            <authoremail>baltasarq@gmail.com</authoremail>
+            <url>http://caad.es/baltasarq/</url>
+        </contacts>
+        <release>
+            <version>1</version>
+            <releasedate>2012/01/25</releasedate>
+        </release>
+        <colophon>
+            <generator>Babble</generator>
+            <originated>2012/01/25</originated>
+        </colophon>
+    </story>
+</ifindex>

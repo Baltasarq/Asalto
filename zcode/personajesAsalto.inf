@@ -1,0 +1,508 @@
+Character soldados
+private
+    hablado false,
+with
+    short_name "partida de asalto",
+    name_mp     'soldados' 'oficiales' 'britanos',
+    name_m      'soldado' 'oficial' 'ejercito',
+    name_f      'partida' 'asalto' 'tropa',
+    name_fp     'tropas',
+    found_in [;
+        if ( location ofclass Exterior
+          && ~~( player.isOutOfCave() ) )
+        {
+            rtrue;
+        }
+    ],
+    changeToOfficer [;
+        soldados.short_name = "Oficial";
+        give soldados proper;
+    ],
+    restoreSoldiers [;
+        soldados.short_name = "partida de asalto";
+        give soldados ~proper;
+    ],
+    initial "Tus soldados siguen tus órdenes.",
+    description [;
+        print "La partida la forman una mayoría de soldados regulares como un grupo
+                 de campesinos buscando fortuna en saqueos o la paga del Rey. Finalmente,
+                 hay también un grupo de mercenarios, que junto con las tropas regulares,
+                 conforman lo mejor del grupo.
+                 ^El pequeño ejército se divide en un pequeño grupo de veinte arqueros,
+                 otro similar de treinta jinetes acorazados, y un contingente, entre
+                 regulares, mercenarios y campesinos, de treinta infantes.^"
+        ;
+
+        if ( location == ENTRADA_A_LA_CUEVA ) {
+            print (s_note) "Es obvio que las tropas sajonas son superiores en
+                número. Sin embargo, los infantes han formado en delta, como
+                piqueros, defendiendo ambos lados de la contienda. Los arqueros,
+                protegidos en el centro, disparan sus flechas contra los
+                agresores.^
+            ";
+        }
+
+        rtrue;
+    ],
+    conversation [;
+        self.changeToOfficer();
+
+        if ( location ~= ENTRADA_A_LA_CUEVA ) {
+            self.say( "¿Sire?" );
+            player.say( "Reúna a la tropa. Debo hablarles." );
+
+            if ( ~~( self.hablado ) ) {
+                self.say( "¡A la orden!" );
+                novelar( "Los oficiales y el resto de la soldadesca soportaron en silencio
+                           la arenga del general sobre el honor, la honra y la valía en el campo
+                           de batalla. Sin embargo, Ulfius sabía en el interín
+                           que todos están decepcionados por tan escaso botín.^"
+                );
+
+                if ( location == ALDEA_SAJONA ) {
+                    player.say( "Emprendamos la marcha." );
+                    self.say( "¡En cuanto así lo ordene, señor!" );
+                } else {
+                    player.say( "Continuemos la marcha." );
+                    self.say( "¡Britanos, preparaos para avanzar!" );
+                }
+                self.hablado = true;
+            } else {
+                self.say( "No creo que sea una buena idea, Sire." );
+                self.say( "Los hombres están decepcionados y cansados, deseosos
+                           de llegar cuanto antes a casa."
+                );
+            }
+        } else {
+            player.think( "La situación es crítica. Sólo nuestra estrategia de combate,
+                         aprovechando el campo de batalla, nos permite sobrevivir.
+                         Pero eso, sólo en el mejor de los casos."
+            );
+            player.say( "Dividid a la caballería. Yo atacaré el flanco izquierdo,
+                         vos el derecho."
+            );
+            self.say( "Sire, la situación es desesperada. Lo mejor es que huyáis.
+                       Si además de vencernos, os capturan, habrán asestado un
+                       duro golpe a la causa britana."
+            );
+            novelar( "Ulfius se quedó helado, paralizado, tras escuchar de su
+                      primer oficial una respuesta
+                      tan crudamente arrolladora, lógica e irrebatible.
+                      Sus peores temores se abrían paso ante él, algo que, ciertamente,
+                      no esperaba.^"
+            );
+        }
+
+        self.restoreSoldiers();
+    ],
+has female;
+
+Character Jugador "Ulfius" limbo
+private
+    outOfCave false,
+with
+    short_name "Ulfius",
+    name 'Ulfius',
+    description
+        "Curtido en mil batallas, te encuentras en forma y con buena salud,
+         para tu ya mediana edad.",
+    getTrapoAceitoso [ x toret;
+        toret = Nothing;
+
+        objectloop ( x ofclass ThingMadeOfCloth ) {
+            if ( isReachable( x )
+              && x.estaAceitoso() )
+            {
+                toret = x;
+                break;
+            }
+        }
+
+        return toret;
+    ],
+    react_before [;
+        Jump:
+            if ( location == ESTALACTITAS ) {
+                player.think( "Pardiez, que no pienso arriesgarme, no con esas estacas
+                               apuntándome desde el techo."
+                );
+                rtrue;
+            }
+
+        default:
+            if ( sajones.isActivated() ) {
+                if ( sajones.time_left == 10 ) {
+                    if ( self in ENTRADA_A_LA_CUEVA ) {
+                        novelar( "Los sajones revelan saeteros en alturas del
+                                  cañón de los que
+                                  el general britano no se había apercibido antes.
+                                  La caballería, atacando a los
+                                  escamoteadores, se encuentra indefensa, y cae totalmente
+                                  ante los asaltantes."
+                        );
+                        player.think( "Sin caballería, estamos perdidos." );
+                    } else {
+                        novelar( "Un griterío ensordecedor vino del exterior." );
+                        player.think( "Algo ha pasado, y, tened por seguro, nada bueno." );
+                    }
+                    rtrue;
+                }
+                else
+                if ( sajones.time_left == 5 ) {
+                    if ( self in ENTRADA_A_LA_CUEVA ) {
+                        novelar( "Los atacantes se aproximan más y más. Cada vez, el número
+                              de picas que se alza para repelerlos es menor."
+                        );
+                        player.think( "Los infantes de élite han caído ya. Alea jacta est." );
+                    } else {
+                        novelar( "El fragor de la lucha parece aproximarse." );
+                        player.think( "La batalla termina." );
+                    }
+                    rtrue;
+                }
+            }
+    ],
+    setOutOfCave [;
+        self.outOfCave = true;
+    ],
+    isOutOfCave [;
+        return self.outOfCave;
+    ],
+;
+
+Character pnjAmbrosio "anciano" limbo
+with
+    short_name "anciano",
+    name 'anciano' 'ambrosio' 'viejo',
+    description "Un hombre aparentemente anciano, con una poblada barba.",
+    conversation [;
+        switch ( self.status ) {
+            0:  ! Ambrosio da la bienvenida a la cueva
+            self.say( "Bienvenido, Ulfius, mi nombre es Ambrosio" );
+            self.toProperName( "Ambrosio" );
+
+            player.say( "El mío es Ulfius, buen hombre. ¿Cómo es que habéis ido a parar aquí?" );
+            self.say( "Un mucho de mal querer ajeno y un poco de timidez mío, me temo." );
+            player.say( "Me temo que no os sigo." );
+            self.say( "Oh, buen Ulfius, pero no perdamos el tiempo con los pormenores de la vida
+                       de este viejo. Contadme, cómo es que habéis ido vos a parar aquí." );
+
+            player.say( "La batalla..." );
+
+            novelar( "El rostro de Ulfius se ensombrece en un momento, como
+                   si de repente se hubiera convertido en cera, palideciendo
+                   delante del anciano."
+            );
+
+            player.say( "Era una expedición de asalto y castigo. Una de tantas,
+                        pero una a la que yo ya ni siquiera quería ya ir." );
+            player.say( "La aldea... la arrasamos. No quedó nada ni nadie..." );
+
+            novelar( "Ulfius le relata la historia al anciano, quien asiente gravemente
+                   ante cada detalle, cada giro del relato."
+            );
+
+            self.say( "Vuestras tribulaciones son comprensibles, amigo mío." );
+            self.say( "No en vano, vuestro corazón no sigue sino el camino de vuestros deseos,
+                       mientras con vuestra razón seguís el caminio trazado por el
+                       designio del Rey."
+            );
+
+            novelar( "Fue en aquel momento, ese momento que Ulfius recordaría
+                   por siempre en su vida, en el que el mundo se derrumbó, justo
+                   encima de sus hombros."
+            );
+
+            player.say( "Todos muertos, los soldados, mis oficiales..." );
+            novelar( "Ulfius miró a Ambrosio con los ojos húmedos." );
+            player.say( "¡Están todos muertos!" );
+
+            novelar( "Amargamente, Ulfius llora con desconsuelo, mientras Ambrosio
+                  le ofrece una bebida obtenida de alguna parte,
+                  y le recuesta dulcemente sobre el catre."
+            );
+
+            self.status++;
+            move self to limbo;
+            <Sleep>;
+            move self to location;
+            rtrue;
+        1:  ! Ambrosio le da útiles a Ulfius, y llega a un acuerdo.
+            self.say( "Espero que hayáis dormido bien, amigo mío." );
+            player.say( "En verdad que no mucho..." );
+            self.say( "Lamento oir tal cosa." );
+            self.say( "Escuchadme, pues tengo un trato que proponeros." );
+            player.think( "¿Un trato?" );
+            player.say( "¿Y qué trato es ese, buen hombre?");
+            self.say( "Necesito que me ayudéis a salir de esta caverna. Mi momento
+                       ha llegado."
+            );
+            self.say( "Sólo vos podréis ayudarme, liberándome de esta prisión." );
+            player.say( "Claro, pero no sé cómo..." );
+            self.say( "Yo puedo daros útiles que os servirán de gran ayuda. Pero
+                       antes, prometedme que me ayudaréis a salir." );
+
+            novelar( "Ulfius se enderezó, otorgando a Ambrosio
+                             toda su atención."
+            );
+            player.say( "Os lo prometo." );
+
+            ! Dar las cosas
+            novelar( "El anciano le alcanza a Ulfius
+                             una antorcha y pedernal, objetos que,
+                             hasta el momento, había mantenido ocultos.^"
+            );
+            move objANTORCHA to player;
+            move objPEDERNAL to player;
+
+            ! Ambrosio desaparece
+            player.say( "Está bien... ¡hay que emprender la marcha!" );
+            novelar( "Miras a Ambrosio, indicándole que te sigue,
+                      y el sonríe afectuosamente y asiente."
+            );
+            move self to limbo;
+            <go w_obj>;
+
+        2:  ! Ambrosio está ya en el final de la cueva, esperando
+            self.say( "Hola, Ulfius. Veo que definitivamente se podía confiar
+                       en vos. Vuestra fama no es desmerecida en absoluto."
+            );
+            novelar( "El britano no se esperaba desde luego ver a Ambrosio en
+                      la aparente salida de la cueva, pero desde luego tampoco
+                      se esperaba aquel tono jocoso e irreverente."
+            );
+            player.say( "¿Acaso os burláis de mi?¡Conocíais en todo momento el
+                         lugar donde se sitúa la salida de la cueva!¡Esto es
+                         una burla, me pusisteis en peligro por nada!"
+            );
+            novelar( "Ulfius apretaba los puños mientras hablaba, torrente de
+                      rabia que sólo un gesto apaciguador de Ambrosio pudo
+                      parar."
+            );
+            self.say( "Nada de eso, Ulfius, sólo me temo que en esta cueva toman
+                       su efecto fuerzas que superan vuestra comprensión. Yo no
+                       estaba sino encerrado aquí, y sólo vuestra valiente acción
+                       contra mi carcelero, decapitándolo, ha sido capaz de
+                       liberarme de uno de los encantamientos que aquí me atrapan."
+            );
+            novelar( "El britano no comprendía gran cosa... y empezaba a aburrirle
+                      el tono de chanza o adivinanza que siempre empleaba Ambrosio."
+            );
+            player.say( "Pero..." );
+            self.say( "Habrá un momento para cada cosa, amigo mío. Ahora, lo que
+                       urge es salir de esta cueva, maldito sea su vientre
+                       ponzoñoso."
+            );
+
+            self.status++;
+        3:  ! Ambrosio se impacienta
+            self.say( "Por favor Ulfius, cumplid con vuestra promesa.
+                       Sacadme de aquí"
+            );
+
+            novelar( "Ulfius apretó los dientes mirándole fijamente;
+                      sin embargo, Ambrosio tenía razón: se lo había prometido."
+            );
+
+        9: ! Ambrosio se larga
+            self.say( "Bien, amigo mío, nuestros caminos se dividen aquí." );
+            novelar( "Ulfius tenía cientos de preguntas que esperaba clarificar
+                      antes de que aquello ocurriera." );
+            player.say( "Ambrosio, necesito respuestas." );
+            novelar( "El general apretó fuertemente la empuñadura de su espada." );
+            self.say( "Lo sé, mi amigo" );
+            self.say( "Pero no es este el momento de las respuestas." );
+            self.say( "Pero os ofrezco una retribución a cambio." );
+            self.say( "Ante vos, se extiende un largo camino de desventuras,
+                       que espero, si me lo permitis, haceros más llevadero.
+                       Acudiré cuando más me necesitéis, os lo garantizo."
+            );
+            novelar( "Demasiado extenuado para soportar tanta evasiva, Ulfius
+                      se echó a un lado." );
+            player.say( "Como gustéis. Haced lo que queráis." );
+            player.say( "Yo me vuelvo a Westmorland." );
+            self.say( "Buena suerte, britano." );
+
+            novelar( "Ambrosio esbozó una sonrisa, que incluso parecía sincera
+                      y desapareció entre la maleza, montaña arriba. Ulfius se
+                      quedó mirando cómo seguía su camino, preguntándose con
+                      una mezcla de rabia, frustración y extraña simpatía."
+            );
+            move self to limbo;
+            player.setOutOfCave();
+        }
+
+        rtrue;
+    ],
+    each_turn [;
+        if ( self.status < 2
+          && location == HOGAR_DE_AMBROSIO )
+        {
+            self.status = 2;
+            if ( self hasnt proper ) {
+                self.toProperName( "Ambrosio" );
+            }
+        }
+    ],
+    seVa [;
+        self.status = 9;
+        self.conversation();
+        rtrue;
+    ],
+;
+
+Character pnjJEFE_DE_REFUGIADOS "anciano" limbo
+with
+    name 'anciano' 'hombre' 'jefe',
+    description
+        "Es un hombre de mediana edad, de barba poco poblada y negra,
+         vestido con ropas sencillas, aunque de su actitud emana una gran
+         personalidad. Por su porte, y el respeto que le confieren los otros,
+         deduces que es su jefe.",
+    reinit [;
+        if ( self.status > 0 ) {
+            self.status = 1;
+        }
+    ],
+    conversation [ blk;
+        blk = false;
+
+        if ( self.status == 0 ) {
+            self.say( "Hola, britano. No sois bienvenido aquí." );
+            novelar( "Ante tales palabras, Ulfius frunció el ceño y se puso
+                            a la defensiva."
+            );
+            player.say( "Ciertamente, he tenido recibimientos más cordiales." );
+
+            novelar( "El jefe de los refugiados miró al general de hito en hito,
+                      sin disimular su gisgusto."
+            );
+
+            self.say( "Mira a tu alrededor, Ulfius, somos refugiados de la gran
+                       guerra. Y tú... tu entras aquí portando tus armas."
+            );
+
+            player.say( "¿Cómo es que conocéis mi nombre?" );
+
+            novelar( "El hombre hizo un vago ademán hacia un lado y detrás de él,
+                      sin apartar por un momento la vista del britano."
+            );
+
+            self.say( "Muchos aquí han visto destruidas sus casas debido a
+                       a expediciones comandados por voecencia."
+            );
+
+            novelar( "El general britano sintió como un escalofrío recorría su
+                      espalda. ¿Era aquel momento el que tanto había temido en
+                      secreto, en el que tendría que rendir cuentas de sus actos?
+                      Inconscientemente, llevó la mano a la empuñadura de su
+                      espada, y separó levemente su piernas, dispuesto a vender
+                      cara su vida, aterradoramente consciente de su situación
+                      de inferioridad numérica."
+            );
+
+            self.say( "Oh, no temáis. No somos violentos aquí. Hemos desterrado
+                       la guerra de nuestras vidas."
+            );
+
+            novelar( "Ulfius soltó el pomo de la espada, mientras el hombre
+                      sonreía, satisfecho, disfrutando de la situación.
+                      El britano frunció el ceño, y miró a su alrededor, preguntándose
+                      a qué clase de enemigo se enfrentaba aquí."
+            );
+
+            self.status++;
+        }
+        else
+        if ( self.status == 1 ) {
+            player.say( "Dejadme pasar, pues. ¿Dónde está la salida de este
+                         lugar?"
+            );
+
+            novelar( "Ulfius miraba más allá de los hombros de su interlocutor,
+                      deseando salir de aquel lugar."
+            );
+
+            self.say( "La salida, general, está al este de aquí." );
+
+            if ( isReachable( objESPADA ) ) {
+                self.say( "Pero ni aquí ni allí habrá lugar para vos y
+                           vuestras armas."
+                );
+
+                blk = true;
+            }
+
+            if ( isReachable( objPIEDRA ) ) {
+                self.say( "Menos aún..." );
+
+                novelar( "El jefe dedicó una mirada llena de repugnancia y
+                          desazón hacia la piedra."
+                );
+
+                self.say( "... para las artes de un brujo." );
+
+                blk = true;
+            }
+
+            if ( blk ) {
+                self.say( "No podemos dejaros pasar. Idos, Ulfius, y volved
+                          cuando hayáis purificado vuestra alma."
+                );
+
+                novelar( "Sin duda, el britano apreció, por su tono de voz, que
+                          ni las armas ni la brujería serían bien aceptadas
+                          allí, aunque debido a su nueva vida no violenta, sabía
+                          que no corría peligro."
+                );
+
+                self.status++;
+            }
+            else {
+                self.say( "Venís en paz, y así seréis tratado." );
+                novelar( "Ulfius sintió una punzada de culpabilidad, pero
+                          sabía que no podría hacer nada al respecto."
+                );
+
+                ALBERGUE_DE_REFUGIADOS.desbloqueaPaso();
+            }
+        }
+        else
+        if ( self.status == 2 ) {
+            novelar(
+                "Hastiado, el hombre alzó una mano hacia Ulfius, con la palma
+                 vuelta hacia él."
+            );
+
+            self.say( "No insistáis, no tenéis nada que hacer aquí. Serán nuestras
+                       condiciones, no las vuestras. Idos de aquí."
+            );
+
+            player.think( "Este hombre ha sido seco y claro. Mejor no insistir más e
+                           irme de aquí."
+            );
+        }
+    ],
+;
+
+Character pnjREFUGIADOS "refugiados" limbo
+with
+    name_m 'refugiado',
+    name_mp 'refugiados',
+    description [;
+        "Hombres y mujeres, algunos niños. Su aspecto desaliñado y sucio contrasta
+         con la paz en sus caras. Esto no ocurre en los hombres, que se muestran
+         abiertamente hostiles hacia tu presencia en su morada.";
+    ],
+    desbloquear [;
+        novelar( "Los refugiados se echaron a un lado,
+                 dejando visible una salida al este..."
+        );
+
+        rtrue;
+    ],
+    conversation [;
+        "Nadie parece interesado. Como mucho, señalan vagamente a su jefe.
+         Parece que nadie se ~rebajará~ a hablar contigo.";
+    ],
+has pluralname;

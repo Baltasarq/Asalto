@@ -1,0 +1,9 @@
+# Backups
+*.back
+*~
+
+# Cassette and Disk files
+*.cas
+*.tap
+*.tzx
+*.dsk
