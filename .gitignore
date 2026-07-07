@@ -7,3 +7,8 @@
 *.tap
 *.tzx
 *.dsk
+
+# Inform 6 executables
+*.z?
+*.ulx
+*.gblorb
